@@ -60,20 +60,22 @@ export default function FeatureComparison() {
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Free Tier */}
-          <div className="relative bg-white rounded-3xl border-2 border-gray-200 p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div className="text-center mb-8 flex-grow">
+          <div className="relative bg-white rounded-3xl border-2 border-gray-200 p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div className="text-center mb-6 sm:mb-8 flex-grow">
               <Badge
                 variant="outline"
-                className="mt-4 mb-6 px-4 py-2 text-sm font-medium border-gray-300 text-gray-600 h-10 flex items-center justify-center"
+                className="mt-2 sm:mt-4 mb-4 sm:mb-6 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-gray-300 text-gray-600 h-8 sm:h-10 flex items-center justify-center mx-auto w-fit"
               >
                 <Eye className="w-4 h-4 mr-2" />
                 Exploration
               </Badge>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">Free</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                Free
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-2">
                 Perfect for browsing and discovery
               </p>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Explore the vault, get inspired. Upgrade when you want the full
                 picture.{" "}
               </p>
@@ -81,56 +83,62 @@ export default function FeatureComparison() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full mb-6 py-4 text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 h-14"
+              className="w-full mb-4 sm:mb-6 py-3 sm:py-4 text-base sm:text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 h-12 sm:h-14"
             >
               Start Exploring
             </Button>
-            <div className="space-y-4 pb-10">
+            <div className="space-y-3 sm:space-y-4 pb-6 sm:pb-10">
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">
+                <span className="text-sm sm:text-base text-gray-700">
                   Browse all blueprint titles
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">View basic descriptions</span>
+                <span className="text-sm sm:text-base text-gray-700">
+                  View basic descriptions
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-gray-700">
+                <span className="text-sm sm:text-base text-gray-700">
                   Filter by industry & complexity
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <X className="h-5 w-5 text-gray-400 flex-shrink-0" />
-                <span className="text-gray-500">Strategic analysis locked</span>
+                <span className="text-sm sm:text-base text-gray-500">
+                  Strategic analysis locked
+                </span>
               </div>
             </div>
           </div>
 
           {/* Pro Tier */}
-          <div className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <div className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-white rounded-3xl p-6 sm:p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
+            <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
               <Badge className="bg-gradient-to-r from-accent to-muted text-primary px-6 py-2 text-sm font-bold shadow-lg border-2 border-white/20">
                 <Zap className="w-4 h-4 mr-2" />
                 Most Popular
               </Badge>
             </div>
-            <div className="text-center mb-8 pt-4 flex-grow">
+            <div className="text-center mb-6 sm:mb-8 pt-6 sm:pt-4 flex-grow">
               <Badge
                 variant="secondary"
-                className="mb-6 px-4 py-2 text-sm font-medium bg-white/20 text-white border-white/30 h-10 flex items-center justify-center"
+                className="mb-4 sm:mb-6 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium bg-white/20 text-white border-white/30 h-8 sm:h-10 flex items-center justify-center mx-auto w-fit"
               >
                 <Lock className="w-4 h-4 mr-2" />
                 Professional
               </Badge>
-              <div className="flex items-baseline justify-center space-x-2 mb-2">
-                <span className="text-5xl font-bold">₹1,000</span>
-                <span className="text-xl opacity-80">/month</span>
+              <div className="flex items-baseline justify-center space-x-1 sm:space-x-2 mb-2">
+                <span className="text-3xl sm:text-5xl font-bold">₹1,000</span>
+                <span className="text-lg sm:text-xl opacity-80">/month</span>
               </div>
-              <p className="text-white/90">Complete strategic intelligence</p>
-              <p className="text-white/90">
+              <p className="text-sm sm:text-base text-white/90 mb-2">
+                Complete strategic intelligence
+              </p>
+              <p className="text-sm sm:text-base text-white/90">
                 {" "}
                 Clarity for the next step. Full blueprint fields across every
                 idea.
@@ -139,39 +147,49 @@ export default function FeatureComparison() {
             <Button
               size="lg"
               variant="secondary"
-              className="w-full mb-6 py-4 text-lg font-semibold bg-white text-primary hover:bg-white/90 shadow-lg h-14"
+              className="w-full mb-4 sm:mb-6 py-3 sm:py-4 text-base sm:text-lg font-semibold bg-white text-primary hover:bg-white/90 shadow-lg h-12 sm:h-14"
             >
               Unlock Full Access
             </Button>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-accent flex-shrink-0" />
-                <span>Everything in Free, plus:</span>
+                <span className="text-sm sm:text-base">
+                  Everything in Free, plus:
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-accent flex-shrink-0" />
-                <span>Complete market analysis</span>
+                <span className="text-sm sm:text-base">
+                  Complete market analysis
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-accent flex-shrink-0" />
-                <span>Technical implementation guides</span>
+                <span className="text-sm sm:text-base">
+                  Technical implementation guides
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-accent flex-shrink-0" />
-                <span>Risk assessment & mitigation</span>
+                <span className="text-sm sm:text-base">
+                  Risk assessment & mitigation
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-accent flex-shrink-0" />
-                <span>Daily new blueprints (3-4/day)</span>
+                <span className="text-sm sm:text-base">
+                  Daily new blueprints (3-4/day)
+                </span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Feature Comparison Table */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-gray-50 to-white px-8 py-6 border-b border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 text-center">
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+          <div className="bg-gradient-to-r from-gray-50 to-white px-4 sm:px-8 py-4 sm:py-6 border-b border-gray-100">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 text-center">
               Detailed Feature Comparison
             </h3>
           </div>
@@ -180,13 +198,13 @@ export default function FeatureComparison() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-100">
-                  <th className="text-left py-4 px-8 font-semibold text-gray-900">
+                  <th className="text-left py-3 sm:py-4 px-4 sm:px-8 font-semibold text-gray-900 text-sm sm:text-base">
                     Features
                   </th>
-                  <th className="text-center py-4 px-6 font-semibold text-gray-600">
+                  <th className="text-center py-3 sm:py-4 px-3 sm:px-6 font-semibold text-gray-600 text-sm sm:text-base">
                     Free
                   </th>
-                  <th className="text-center py-4 px-6 font-semibold text-primary">
+                  <th className="text-center py-3 sm:py-4 px-3 sm:px-6 font-semibold text-primary text-sm sm:text-base">
                     Pro
                   </th>
                 </tr>
@@ -195,10 +213,10 @@ export default function FeatureComparison() {
                 {features.map((category, categoryIndex) => (
                   <React.Fragment key={categoryIndex}>
                     <tr className="bg-gray-50/50">
-                      <td colSpan={3} className="py-4 px-8">
+                      <td colSpan={3} className="py-3 sm:py-4 px-4 sm:px-8">
                         <div className="flex items-center space-x-3">
                           <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="font-bold text-gray-900 text-lg">
+                          <span className="font-bold text-gray-900 text-base sm:text-lg">
                             {category.category}
                           </span>
                         </div>
@@ -209,15 +227,17 @@ export default function FeatureComparison() {
                         key={itemIndex}
                         className="border-b border-gray-50 hover:bg-gray-50/30 transition-colors"
                       >
-                        <td className="py-4 px-8 text-gray-700">{item.name}</td>
-                        <td className="py-4 px-6 text-center">
+                        <td className="py-3 sm:py-4 px-4 sm:px-8 text-gray-700 text-sm sm:text-base">
+                          {item.name}
+                        </td>
+                        <td className="py-3 sm:py-4 px-3 sm:px-6 text-center">
                           {item.free ? (
                             <Check className="h-5 w-5 text-green-500 mx-auto" />
                           ) : (
                             <X className="h-5 w-5 text-gray-300 mx-auto" />
                           )}
                         </td>
-                        <td className="py-4 px-6 text-center">
+                        <td className="py-3 sm:py-4 px-3 sm:px-6 text-center">
                           <Check className="h-5 w-5 text-primary mx-auto" />
                         </td>
                       </tr>
@@ -230,8 +250,8 @@ export default function FeatureComparison() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        <div className="text-center mt-12 sm:mt-16">
+          <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-2xl mx-auto px-4">
             Start exploring for free, upgrade when you find blueprints worth
             executing. Cancel anytime, no long-term commitments.
           </p>
@@ -239,13 +259,13 @@ export default function FeatureComparison() {
             <Button
               variant="outline"
               size="lg"
-              className="px-8 py-3 text-lg font-semibold border-2 border-gray-200 hover:border-primary/30"
+              className="px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-2 border-gray-200 hover:border-primary/30"
             >
               Browse Free Blueprints
             </Button>
             <Button
               size="lg"
-              className="px-8 py-3 text-lg font-semibold bg-gradient-to-r from-primary to-secondary shadow-lg hover:shadow-xl transition-all duration-300"
+              className="px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold bg-gradient-to-r from-primary to-secondary shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Start Pro Trial
             </Button>
