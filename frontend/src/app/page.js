@@ -5,16 +5,16 @@ import { Lock, Check, ArrowRight, Zap, Users, Target, Shield, Calendar, External
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">R</span>
               </div>
-              <span className="text-xl font-semibold text-gray-900">retry.build</span>
+              <span className="text-xl font-semibold text-primary">retry.build</span>
               <Badge variant="secondary" className="text-xs">
                 Calm Progress
               </Badge>
@@ -34,7 +34,7 @@ export default function Home() {
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Clarity over chaos.
             <br />
-            <span className="text-blue-600">Ideas you can actually build.</span>
+            <span className="text-primary">Ideas you can actually build.</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             A calm, research-backed vault of SaaS blueprints. No hype, no "vibes"—just structured ideas with market notes, tech suggestions, and realistic next steps. New blueprints added daily.
@@ -66,20 +66,20 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-blue-600" />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Clarity beats hustle</h3>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ArrowRight className="h-8 w-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ArrowRight className="h-8 w-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Progress > vibes</h3>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-purple-600" />
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-accent" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Calm, consistent execution wins</h3>
             </div>
@@ -115,9 +115,9 @@ export default function Home() {
             </Card>
 
             {/* Pro Tier */}
-            <Card className="relative border-blue-200 bg-blue-50/50">
+            <Card className="relative border-secondary/30 bg-secondary/5">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-blue-600">Most Popular</Badge>
+                <Badge className="bg-secondary">Most Popular</Badge>
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl">Pro (everything)</CardTitle>
@@ -136,7 +136,7 @@ export default function Home() {
                   "Exports to Notion/Trello/Asana to keep you moving"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <Check className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">{feature}</span>
                   </div>
                 ))}
@@ -161,23 +161,23 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+             <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
               <h3 className="text-xl font-semibold mb-2">Browse & shortlist</h3>
               <p className="text-gray-600">by niche, market size, complexity, or stack</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+             <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
               <h3 className="text-xl font-semibold mb-2">Unlock details</h3>
               <p className="text-gray-600">to see the entire research blueprint</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+             <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
               <h3 className="text-xl font-semibold mb-2">Move forward</h3>
               <p className="text-gray-600">with a concrete plan (and zero guesswork)</p>
             </div>
           </div>
           
-          <div className="mt-12 p-6 bg-blue-50 rounded-lg text-center">
+          <div className="mt-12 p-6 bg-muted/20 rounded-lg text-center">
             <p className="text-gray-700 italic">
               retry.build is designed to grow with you. Today, you get the best <strong>idea discovery</strong> experience. Members will always be first to see what's next.
             </p>
@@ -195,7 +195,7 @@ export default function Home() {
           
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 right-4">
-              <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">
+              <Badge variant="secondary" className="bg-muted/30 text-primary">
                 <Lock className="h-3 w-3 mr-1" />
                 Locked
               </Badge>
@@ -213,8 +213,8 @@ export default function Home() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border-2 border-dashed border-blue-200">
-                <div className="flex items-center justify-center space-x-2 text-blue-600 mb-4">
+              <div className="bg-gradient-to-r from-secondary/10 to-accent/10 p-6 rounded-lg border-2 border-dashed border-secondary/30">
+                <div className="flex items-center justify-center space-x-2 text-primary mb-4">
                   <Lock className="h-5 w-5" />
                   <span className="font-semibold">Unlock to see:</span>
                 </div>
@@ -222,7 +222,7 @@ export default function Home() {
                   full problem/solution, market & pricing, MVP scope & timeline, tech stack, compliance notes, risks, growth plays, and exportable roadmap.
                 </p>
                 <div className="mt-4 text-center">
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Button>
                     See market size, pricing, MVP, and stack →
                   </Button>
                 </div>
@@ -241,8 +241,8 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Zap className="h-6 w-6 text-red-600" />
+              <div className="w-12 h-12 bg-destructive/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Zap className="h-6 w-6 text-destructive" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2">Builders stuck in the vibe-coding loop</h3>
@@ -250,8 +250,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Target className="h-6 w-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Target className="h-6 w-6 text-secondary" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2">Indie hackers</h3>
@@ -259,8 +259,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Users className="h-6 w-6 text-blue-600" />
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Users className="h-6 w-6 text-primary" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2">Agencies</h3>
@@ -268,8 +268,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <Calendar className="h-6 w-6 text-purple-600" />
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Calendar className="h-6 w-6 text-accent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2">Investors/strategists</h3>
@@ -308,9 +308,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-blue-200 bg-blue-50/50 relative">
+            <Card className="border-secondary/30 bg-secondary/5 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-blue-600">Recommended</Badge>
+                <Badge className="bg-secondary">Recommended</Badge>
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl">Pro</CardTitle>
@@ -322,26 +322,26 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-blue-500" />
+                  <Check className="h-5 w-5 text-secondary" />
                   <span>Unlock all details on every idea</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-blue-500" />
+                  <Check className="h-5 w-5 text-secondary" />
                   <span>Access the full archive</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-blue-500" />
+                  <Check className="h-5 w-5 text-secondary" />
                   <span>Early access to new drops</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-blue-500" />
+                  <Check className="h-5 w-5 text-secondary" />
                   <span>Save & tag favorites</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Check className="h-5 w-5 text-blue-500" />
+                  <Check className="h-5 w-5 text-secondary" />
                   <span>Export to your project tools</span>
                 </div>
-                <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full mt-6">
                   Unlock Full Access
                 </Button>
                 <div className="text-center space-y-2 text-sm text-gray-600">
@@ -355,7 +355,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">Build with clarity. Sustain your momentum.</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -365,7 +365,7 @@ export default function Home() {
             <Button size="lg" variant="secondary" className="px-8 py-3 text-lg">
               Browse Free Ideas
             </Button>
-            <Button size="lg" variant="outline" className="px-8 py-3 text-lg border-white text-white hover:bg-white hover:text-blue-600">
+            <Button size="lg" variant="outline" className="px-8 py-3 text-lg border-white text-white hover:bg-white hover:text-primary">
               Unlock Full Access – ₹1,000/month
             </Button>
           </div>
@@ -377,7 +377,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">R</span>
               </div>
               <span className="text-xl font-semibold">retry.build</span>
