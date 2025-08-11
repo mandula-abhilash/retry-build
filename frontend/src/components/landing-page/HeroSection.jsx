@@ -7,11 +7,37 @@ import { Check, ArrowRight, Star } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+      {/* Existing backgrounds (bottom stack) */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-50 via-white to-blue-50/30" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 z-0 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 z-0 bg-secondary/10 rounded-full blur-3xl" />
 
-      <div className="relative max-w-5xl mx-auto text-center">
+      {/* Always-visible subtle grid overlay (no Tailwind arbitrary props) */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(
+              to right,
+              rgba(17, 24, 39, 0.06) 0px,
+              rgba(17, 24, 39, 0.06) 0px,
+              transparent 1px,
+              transparent 22px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              rgba(17, 24, 39, 0.06) 0px,
+              rgba(17, 24, 39, 0.06) 0px,
+              transparent 1px,
+              transparent 22px
+            )
+          `,
+          backgroundSize: "32px 32px",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-20 max-w-5xl mx-auto text-center">
         <div className="mb-8">
           <Badge
             variant="outline"
