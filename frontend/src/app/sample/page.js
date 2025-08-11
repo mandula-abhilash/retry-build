@@ -7,20 +7,13 @@ import Footer from "@/components/landing-page/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import {
   ArrowLeft,
   Clock,
   Users,
   Target,
   TrendingUp,
-  Shield,
   Zap,
   DollarSign,
   CheckCircle,
@@ -101,25 +94,12 @@ export default function SampleBlueprintPage() {
                 <div className="text-xs text-gray-500">Market Size</div>
               </div>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="px-8 py-3 text-lg font-semibold">
-                Unlock Full Blueprint - ₹1,000/month
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 text-lg font-semibold"
-              >
-                View All Blueprints
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-4 gap-8">
             {/* Sidebar Navigation */}
@@ -192,8 +172,8 @@ export default function SampleBlueprintPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="bg-blue-50 p-4 rounded-md text-lg font-semibold text-primary mb-6">
-                        {sampleData.uvp_statement}
+                      <p className="text-lg font-medium text-primary mb-6">
+                        "{sampleData.uvp_statement}"
                       </p>
                       <div className="space-y-4">
                         <div className="p-4 bg-gray-50 rounded-lg">
@@ -204,7 +184,7 @@ export default function SampleBlueprintPage() {
                             {sampleData.target_users}
                           </p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
+                        <div className="p-4 bg-blue-50 rounded-lg">
                           <h4 className="font-semibold mb-3 text-gray-900">
                             Platform & Scope
                           </h4>
@@ -759,14 +739,14 @@ export default function SampleBlueprintPage() {
               variant="secondary"
               className="px-8 py-4 text-lg font-semibold"
             >
-              Start Pro Trial - ₹1,000/month
+              Get Pro Access - ₹1,000/month
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="px-8 py-4 text-lg font-semibold border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 hover:border-white/70 hover:text-white"
             >
-              Browse More Samples
+              Back to Home
             </Button>
           </div>
         </div>

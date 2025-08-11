@@ -28,9 +28,9 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="sm"
-                className="hidden sm:inline-flex border-gray-200 hover:border-primary/30 text-xs sm:text-sm"
+                className="hidden sm:inline-flex border-gray-200 bg-accent text-white hover:border-primary/30 text-xs sm:text-sm"
               >
-                Sample
+                View Sample Blueprint
               </Button>
             </Link>
             <Button
