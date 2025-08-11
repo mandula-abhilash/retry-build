@@ -627,9 +627,9 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="px-10 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white backdrop-blur-sm"
+              className="px-10 py-4 text-lg font-semibold border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 hover:border-white/70 hover:text-white backdrop-blur-sm"
             >
-              Unlock Pro Access – ₹1,000/month
+              Unlock Pro Access - ₹1,000/month
             </Button>
           </div>
 
