@@ -24,6 +24,15 @@ export default function Header() {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span>3 new blueprints today</span>
             </div>
+            <Link href="/guide">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="hidden md:inline-flex text-gray-600 hover:text-primary hover:bg-primary/5 text-xs sm:text-sm"
+              >
+                Field Guide
+              </Button>
+            </Link>
             <Link href="/sample">
               <Button
                 variant="outline"
@@ -33,6 +42,7 @@ export default function Header() {
                 View Sample Blueprint
               </Button>
             </Link>
+
             <Button
               size="sm"
               className="shadow-lg hover:shadow-xl transition-all duration-300 text-xs sm:text-sm"
