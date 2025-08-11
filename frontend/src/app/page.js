@@ -9,7 +9,6 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import {
   Lock,
   Check,
@@ -19,209 +18,151 @@ import {
   Target,
   Shield,
   Calendar,
-  Sparkles,
-  BarChart3,
-  Library,
   ExternalLink,
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[radial-gradient(1200px_500px_at_50%_-10%,rgba(59,130,246,0.12),transparent)]">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b bg-white/70 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            {/* Brand */}
-            <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-sm">
-                <span className="text-sm font-bold">R</span>
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">R</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-semibold tracking-tight">
-                  <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-                    retry.build
-                  </span>
-                </span>
-                <Badge variant="secondary" className="hidden sm:inline-flex">
-                  Calm Progress
-                </Badge>
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex items-center gap-3">
-              <span className="hidden text-sm text-slate-600 sm:inline-flex">
-                New today:{" "}
-                <span className="ml-1 font-medium">3 blueprints</span>
+              <span className="text-xl font-semibold text-primary">
+                retry.build
               </span>
-              <Button variant="outline" size="sm" className="hover:shadow-sm">
+              <Badge variant="secondary" className="text-xs">
+                Calm Progress
+              </Badge>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span className="text-sm text-gray-600 hidden md:block">
+                New today: 3 blueprints
+              </span>
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden sm:inline-flex"
+              >
                 Browse Free
               </Button>
-              <Button size="sm" className="shadow-sm hover:shadow">
-                Unlock Pro
-              </Button>
+              <Button size="sm">Unlock Pro</Button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        {/* subtle gradient wash */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(900px_300px_at_50%_10%,rgba(99,102,241,0.10),transparent)]" />
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border bg-white px-3 py-1 text-xs text-slate-600 shadow-sm">
-              <Sparkles className="h-3.5 w-3.5" />
-              Fresh, research-backed SaaS blueprints
-            </div>
-            <h1 className="mb-6 text-5xl font-bold leading-tight tracking-[-0.02em] text-slate-900 sm:text-6xl">
-              Clarity over chaos.
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Ideas you can actually build.
-              </span>
-            </h1>
-            <p className="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-slate-600">
-              A calm, research-backed vault of SaaS blueprints. No hype, no
-              “vibes”—just structured ideas with market notes, tech suggestions,
-              and realistic next steps. New blueprints added daily.
-            </p>
-
-            <div className="mx-auto mb-6 flex max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:justify-center">
-              <Button
-                size="lg"
-                className="h-12 rounded-xl px-7 text-base shadow-sm hover:shadow"
-              >
-                Browse Free Ideas
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-12 rounded-xl px-7 text-base shadow-sm hover:shadow"
-              >
-                Unlock Full Access – ₹1,000/month
-              </Button>
-            </div>
-
-            <p className="text-sm text-slate-500">
-              From real product experience. Not promises—starting points.
-            </p>
-
-            {/* Stats strip */}
-            <div className="mx-auto mt-10 grid max-w-3xl grid-cols-3 gap-4 rounded-2xl border bg-white/80 p-4 text-center shadow-sm backdrop-blur">
-              {[
-                { icon: Library, label: "Blueprints", value: "1,000+" },
-                { icon: BarChart3, label: "Complexity levels", value: "3–5" },
-                { icon: Sparkles, label: "New / day", value: "3–4" },
-              ].map((s, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <s.icon className="mb-1 h-5 w-5 text-blue-600" />
-                  <div className="text-base font-semibold text-slate-900">
-                    {s.value}
-                  </div>
-                  <div className="text-xs text-slate-500">{s.label}</div>
-                </div>
-              ))}
-            </div>
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Clarity over chaos.
+            <br />
+            <span className="text-primary">Ideas you can actually build.</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            A calm, research-backed vault of SaaS blueprints. No hype, no
+            "vibes"—just structured ideas with market notes, tech suggestions,
+            and realistic next steps. New blueprints added daily.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <Button size="lg" className="px-8 py-3 text-lg">
+              Browse Free Ideas
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
+              Unlock Full Access – ₹1,000/month
+            </Button>
           </div>
+          <p className="text-sm text-gray-500">
+            From real product experience. Not promises—starting points.
+          </p>
         </div>
       </section>
 
       {/* Anti-Hype Positioning */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Why retry.build Exists
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
-              Most people don’t fail for lack of code—they fail for lack of
-              clarity. “Vibe coding” feels productive… until weeks pass and
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Most people don't fail for lack of code—they fail for lack of
+              clarity. "Vibe coding" feels productive… until weeks pass and
               motivation dips. <strong>retry.build</strong> replaces fuzzy
-              starts with <strong>evidence-first blueprints</strong> so you can
-              move steadily, reduce false starts, and protect your energy.
+              "feel-good" starts with{" "}
+              <strong>evidence-first idea blueprints</strong> so you can move
+              steadily, reduce false starts, and protect your energy.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              { icon: Target, title: "Clarity beats hustle", tone: "blue" },
-              {
-                icon: ArrowRight,
-                title: "Progress > vibes",
-                tone: "emerald",
-              },
-              {
-                icon: Shield,
-                title: "Calm, consistent execution",
-                tone: "violet",
-              },
-            ].map((f, i) => (
-              <Card
-                key={i}
-                className="group border-slate-200 transition hover:-translate-y-0.5 hover:shadow-sm"
-              >
-                <CardContent className="p-6 text-center">
-                  <div
-                    className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-${f.tone}-100`}
-                  >
-                    <f.icon className={`h-7 w-7 text-${f.tone}-600`} />
-                  </div>
-                  <div className="text-lg font-semibold text-slate-900">
-                    {f.title}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Clarity beats hustle
+              </h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ArrowRight className="h-8 w-8 text-secondary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Progress > vibes</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Calm, consistent execution wins
+              </h3>
+            </div>
           </div>
         </div>
       </section>
 
       {/* What You Get */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               What You Get
             </h2>
-            <p className="mt-2 text-slate-600">Free vs Pro comparison</p>
+            <p className="text-lg text-gray-600">Free vs Pro comparison</p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {/* Free */}
-            <Card className="border-slate-200">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Free Tier */}
+            <Card className="relative">
               <CardHeader>
                 <CardTitle className="text-2xl">Free (taste)</CardTitle>
                 <CardDescription>Explore the vault structure</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-3">
-                {[
-                  "Title, short description, tags, effort level",
-                  "A peek at the blueprint structure (blurred sections)",
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 text-emerald-500" />
-                    <span className="text-slate-700">{feature}</span>
-                  </div>
-                ))}
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-green-500" />
+                  <span>Title, short description, tags, effort level</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-green-500" />
+                  <span>
+                    A peek at the blueprint structure (blurred sections)
+                  </span>
+                </div>
               </CardContent>
             </Card>
 
-            {/* Pro */}
-            <Card className="relative border-blue-200 bg-gradient-to-b from-blue-50/60 to-white">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <Badge className="rounded-full bg-blue-600 px-3 py-1 text-[11px]">
-                  Most Popular
-                </Badge>
+            {/* Pro Tier */}
+            <Card className="relative border-secondary/30 bg-secondary/5">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-secondary">Most Popular</Badge>
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl">Pro (everything)</CardTitle>
@@ -238,17 +179,18 @@ export default function Home() {
                   "Compliance notes (when relevant)",
                   "Growth ideas & early traction playbooks",
                   "Exports to Notion/Trello/Asana to keep you moving",
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 text-blue-600" />
-                    <span className="text-sm text-slate-700">{feature}</span>
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <Check className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
                   </div>
                 ))}
-                <Separator className="my-4" />
-                <p className="text-sm text-slate-600">
-                  <strong>P.S.</strong> New blueprints drop daily (3–4/day),
-                  across domains and complexity levels.
-                </p>
+                <div className="pt-4 border-t">
+                  <p className="text-sm text-gray-600">
+                    <strong>P.S.</strong> New blueprints drop daily (3–4/day),
+                    across domains and complexity levels.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -256,111 +198,99 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               How It Works
             </h2>
-            <p className="mt-2 text-slate-600">Clarity-First Workflow</p>
+            <p className="text-lg text-gray-600">Clarity-First Workflow</p>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
-            {[
-              {
-                n: 1,
-                t: "Browse & shortlist",
-                s: "by niche, market size, complexity, or stack",
-              },
-              {
-                n: 2,
-                t: "Unlock details",
-                s: "to see the entire research blueprint",
-              },
-              {
-                n: 3,
-                t: "Move forward",
-                s: "with a concrete plan (and zero guesswork)",
-              },
-            ].map((step) => (
-              <Card
-                key={step.n}
-                className="border-slate-200 transition hover:-translate-y-0.5 hover:shadow-sm"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white">
-                    <span className="text-lg font-bold">{step.n}</span>
-                  </div>
-                  <div className="text-lg font-semibold text-slate-900">
-                    {step.t}
-                  </div>
-                  <p className="mt-1 text-sm text-slate-600">{step.s}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                1
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Browse & shortlist</h3>
+              <p className="text-gray-600">
+                by niche, market size, complexity, or stack
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                2
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Unlock details</h3>
+              <p className="text-gray-600">
+                to see the entire research blueprint
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                3
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Move forward</h3>
+              <p className="text-gray-600">
+                with a concrete plan (and zero guesswork)
+              </p>
+            </div>
           </div>
 
-          <div className="mx-auto mt-10 max-w-4xl rounded-2xl border bg-blue-50 p-6 text-center text-blue-900">
-            <p className="italic">
+          <div className="mt-12 p-6 bg-muted/20 rounded-lg text-center">
+            <p className="text-gray-700 italic">
               retry.build is designed to grow with you. Today, you get the best{" "}
               <strong>idea discovery</strong> experience. Members will always be
-              first to see what’s next.
+              first to see what's next.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Sample Idea */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+      {/* Sample Idea Preview */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Sample Idea
             </h2>
-            <p className="mt-2 text-slate-600">Locked Preview</p>
+            <p className="text-lg text-gray-600">Locked Preview</p>
           </div>
 
-          <Card className="relative mt-8 overflow-hidden border-slate-200">
-            <div className="absolute right-4 top-4">
-              <Badge
-                variant="secondary"
-                className="bg-amber-100 text-amber-900"
-              >
-                <Lock className="mr-1 h-3.5 w-3.5" />
+          <Card className="relative overflow-hidden">
+            <div className="absolute top-4 right-4">
+              <Badge variant="secondary" className="bg-muted/30 text-primary">
+                <Lock className="h-3 w-3 mr-1" />
                 Locked
               </Badge>
             </div>
-
             <CardHeader>
               <CardTitle className="text-2xl">
                 Quieter Shifts for Nurses
               </CardTitle>
-              <CardDescription className="text-base">
+              <CardDescription className="text-lg">
                 Software that reduces noise for nursing teams.
               </CardDescription>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mt-4">
                 <Badge variant="outline">healthcare</Badge>
                 <Badge variant="outline">nursing</Badge>
                 <Badge variant="outline">noise-monitoring</Badge>
                 <Badge variant="outline">Effort: 16–20 weeks</Badge>
               </div>
             </CardHeader>
-
             <CardContent>
-              <div className="rounded-xl border-2 border-dashed border-blue-200 bg-gradient-to-r from-blue-50 to-violet-50 p-6">
-                <div className="mb-3 flex items-center justify-center gap-2 text-blue-700">
+              <div className="bg-gradient-to-r from-secondary/10 to-accent/10 p-6 rounded-lg border-2 border-dashed border-secondary/30">
+                <div className="flex items-center justify-center space-x-2 text-primary mb-4">
                   <Lock className="h-5 w-5" />
                   <span className="font-semibold">Unlock to see:</span>
                 </div>
-                <p className="mx-auto max-w-2xl text-center text-slate-700">
+                <p className="text-gray-700 text-center">
                   full problem/solution, market & pricing, MVP scope & timeline,
-                  tech stack, compliance notes, risks, growth plays, and an
+                  tech stack, compliance notes, risks, growth plays, and
                   exportable roadmap.
                 </p>
-                <div className="mt-5 text-center">
-                  <Button className="rounded-xl bg-blue-600 px-6 hover:bg-blue-700">
-                    See market size, pricing, MVP, and stack →
-                  </Button>
+                <div className="mt-4 text-center">
+                  <Button>See market size, pricing, MVP, and stack →</Button>
                 </div>
               </div>
             </CardContent>
@@ -368,223 +298,183 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who It’s For */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
-              Who It’s For
+      {/* Who It's For */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Who It's For
             </h2>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-            {[
-              {
-                icon: Zap,
-                tone: "red",
-                title: "Builders stuck in the vibe-coding loop",
-                sub: "who want a steady plan",
-              },
-              {
-                icon: Target,
-                tone: "green",
-                title: "Indie hackers",
-                sub: "who want clarity before code",
-              },
-              {
-                icon: Users,
-                tone: "blue",
-                title: "Agencies",
-                sub: "turning expertise into products",
-              },
-              {
-                icon: Calendar,
-                tone: "purple",
-                title: "Investors/strategists",
-                sub: "scanning early opportunities",
-              },
-            ].map((p, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div
-                  className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-${p.tone}-100`}
-                >
-                  <p.icon className={`h-6 w-6 text-${p.tone}-600`} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {p.title}
-                  </h3>
-                  <p className="text-slate-600">{p.sub}</p>
-                </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-destructive/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Zap className="h-6 w-6 text-destructive" />
               </div>
-            ))}
+              <div>
+                <h3 className="text-lg font-semibold mb-2">
+                  Builders stuck in the vibe-coding loop
+                </h3>
+                <p className="text-gray-600">who want a steady plan</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Target className="h-6 w-6 text-secondary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Indie hackers</h3>
+                <p className="text-gray-600">who want clarity before code</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Agencies</h3>
+                <p className="text-gray-600">turning expertise into products</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Calendar className="h-6 w-6 text-accent" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">
+                  Investors/strategists
+                </h3>
+                <p className="text-gray-600">scanning early opportunities</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
-              Pricing
-            </h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing</h2>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* Free */}
-            <Card className="border-slate-200 transition hover:-translate-y-0.5 hover:shadow-sm">
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card>
               <CardHeader>
                 <CardTitle className="text-2xl">Free</CardTitle>
                 <CardDescription>Get started with basic access</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-3">
-                {["Browse the vault", "View limited fields on each idea"].map(
-                  (f, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <Check className="mt-0.5 h-5 w-5 text-emerald-500" />
-                      <span className="text-slate-700">{f}</span>
-                    </div>
-                  )
-                )}
-                <Button variant="outline" className="mt-6 w-full">
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-green-500" />
+                  <span>Browse the vault</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-green-500" />
+                  <span>View limited fields on each idea</span>
+                </div>
+                <Button variant="outline" className="w-full mt-6">
                   Start Free
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Pro */}
-            <Card className="relative border-blue-200 bg-gradient-to-b from-blue-50/70 to-white transition hover:-translate-y-0.5 hover:shadow-sm">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <Badge className="rounded-full bg-blue-600 px-3 py-1 text-[11px]">
-                  Recommended
-                </Badge>
+            <Card className="border-secondary/30 bg-secondary/5 relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-secondary">Recommended</Badge>
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl">Pro</CardTitle>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-slate-900">
-                    ₹1,000
-                  </span>
-                  <span className="text-slate-600">/month</span>
+                <div className="flex items-baseline space-x-2">
+                  <span className="text-3xl font-bold">₹1,000</span>
+                  <span className="text-gray-600">/month</span>
                 </div>
                 <CardDescription>Full access to all blueprints</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-3">
-                {[
-                  "Unlock all details on every idea",
-                  "Access the full archive",
-                  "Early access to new drops",
-                  "Save & tag favorites",
-                  "Export to your project tools",
-                ].map((f, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <Check className="mt-0.5 h-5 w-5 text-blue-600" />
-                    <span className="text-slate-700">{f}</span>
-                  </div>
-                ))}
-
-                <Button className="mt-6 w-full rounded-xl bg-blue-600 hover:bg-blue-700">
-                  Unlock Full Access
-                </Button>
-
-                <div className="mt-3 space-y-2 text-center text-sm text-slate-600">
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-secondary" />
+                  <span>Unlock all details on every idea</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-secondary" />
+                  <span>Access the full archive</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-secondary" />
+                  <span>Early access to new drops</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-secondary" />
+                  <span>Save & tag favorites</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="h-5 w-5 text-secondary" />
+                  <span>Export to your project tools</span>
+                </div>
+                <Button className="w-full mt-6">Unlock Full Access</Button>
+                <div className="text-center space-y-2 text-sm text-gray-600">
                   <p>
-                    ₹1,000/month ≈ ₹33/day—less than a coffee for weeks saved.
+                    ₹1,000/month ≈ ₹33/day—less than a coffee for clarity that
+                    saves weeks.
                   </p>
                   <p className="text-xs">
-                    We don’t promise outcomes. We provide researched starting
+                    We don't promise outcomes. We provide researched starting
                     points so you can execute with confidence.
                   </p>
                 </div>
               </CardContent>
             </Card>
           </div>
-
-          {/* FAQ */}
-          <div className="mx-auto mt-14 max-w-3xl">
-            <h3 className="text-center text-xl font-semibold text-slate-900">
-              FAQs
-            </h3>
-            <Accordion type="single" collapsible className="mt-4">
-              <AccordionItem value="a1">
-                <AccordionTrigger>
-                  How often do you add new ideas?
-                </AccordionTrigger>
-                <AccordionContent>
-                  We add 3–4 new blueprints daily across domains and complexity
-                  levels.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="a2">
-                <AccordionTrigger>Can I cancel anytime?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. Pro is month-to-month. Cancel from your account in a
-                  click.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="a3">
-                <AccordionTrigger>Do you include code?</AccordionTrigger>
-                <AccordionContent>
-                  We focus on decision clarity: problems, scope, stack, risks,
-                  and timelines. Code snippets or starters appear when useful.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold tracking-tight">
-              Build with clarity. Sustain your momentum.
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-lg opacity-90">
-              Join builders swapping vibe coding for calm, consistent progress.
-            </p>
-            <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="h-12 rounded-xl px-7 text-base"
-              >
-                Browse Free Ideas
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-12 rounded-xl px-7 text-base text-white hover:bg-white hover:text-blue-700"
-              >
-                Unlock Full Access – ₹1,000/month
-              </Button>
-            </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Build with clarity. Sustain your momentum.
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join builders who are swapping vibe coding for calm, consistent
+            progress.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" className="px-8 py-3 text-lg">
+              Browse Free Ideas
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="px-8 py-3 text-lg border-white text-white hover:bg-white hover:text-primary"
+            >
+              Unlock Full Access – ₹1,000/month
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="mb-4 inline-flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white">
-                <span className="text-sm font-bold">R</span>
+      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">R</span>
               </div>
               <span className="text-xl font-semibold">retry.build</span>
             </div>
-            <p className="mx-auto max-w-2xl text-sm text-slate-400">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               A healthier builder environment. Low-noise guidance, realistic
-              timelines, structured next steps. Not medical advice—just
-              structure to work calmly and consistently.
+              timelines, structured next steps. We're not giving medical advice.
+              We're giving structure—so you can work calmly and consistently.
             </p>
           </div>
-          <Separator className="my-8 bg-slate-800" />
-          <p className="text-center text-xs text-slate-500">
-            © {new Date().getFullYear()} retry.build. All rights reserved.
-          </p>
+
+          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 retry.build. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
