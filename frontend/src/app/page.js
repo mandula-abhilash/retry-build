@@ -7,6 +7,7 @@ import FeatureComparison from "@/components/landing-page/FeatureComparison";
 import ProcessSection from "@/components/landing-page/ProcessSection";
 import SampleBlueprint from "@/components/landing-page/SampleBlueprint";
 import TargetAudience from "@/components/landing-page/TargetAudience";
+import WhyWeStarted from "@/components/landing-page/WhyWeStarted";
 import FinalCTA from "@/components/landing-page/FinalCTA";
 import Footer from "@/components/landing-page/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <ProcessSection />
       <SampleBlueprint />
       <TargetAudience />
+      <WhyWeStarted />
       <FinalCTA />
       <Footer />
     </div>
