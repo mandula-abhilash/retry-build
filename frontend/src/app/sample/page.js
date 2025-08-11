@@ -89,9 +89,9 @@ export default function SampleBlueprintPage() {
               <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
                 <TrendingUp className="w-6 h-6 text-primary mx-auto mb-2" />
                 <div className="text-sm font-semibold text-gray-900">
-                  {sampleData.market_size.split(":")[1]?.trim() || "$0.5-1.5B"}
+                  {sampleData.founder_fit_score}/5
                 </div>
-                <div className="text-xs text-gray-500">Market Size</div>
+                <div className="text-xs text-gray-500">Founder Fit</div>
               </div>
             </div>
           </div>
