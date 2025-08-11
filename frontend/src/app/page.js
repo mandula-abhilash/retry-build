@@ -20,8 +20,8 @@ export default function Home() {
               </Badge>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-600 hidden sm:block">New today: 3 blueprints</span>
-              <Button variant="outline" size="sm">Browse Free</Button>
+              <span className="text-sm text-gray-600 hidden md:block">New today: 3 blueprints</span>
+              <Button variant="outline" size="sm" className="hidden sm:inline-flex">Browse Free</Button>
               <Button size="sm">Unlock Pro</Button>
             </div>
           </div>
