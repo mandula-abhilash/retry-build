@@ -57,6 +57,12 @@ export default function BlueprintGuidePage() {
             "Estimated time from start to MVP launch (e.g., '16-20 weeks').",
           why: "Critical for planning and resource allocation. Helps you choose projects that fit your timeline.",
         },
+        {
+          name: "Founder Fit Score",
+          description:
+            "Personal fit assessment (e.g., '8/10 if healthcare background'). Scores how well this opportunity matches typical founder profiles.",
+          why: "Helps you quickly assess if this project aligns with your background, skills, and interests before diving deep.",
+        },
       ],
     },
     {
@@ -118,6 +124,12 @@ export default function BlueprintGuidePage() {
             "Characteristics of customers most likely to try your product first.",
           why: "Your initial target for validation and early traction.",
         },
+        {
+          name: "Why Now",
+          description:
+            "Market timing and trends that make this opportunity particularly relevant today.",
+          why: "Validates that you're building at the right time when market conditions favor success.",
+        },
       ],
     },
     {
@@ -149,6 +161,18 @@ export default function BlueprintGuidePage() {
             "Key roles and expertise needed to execute successfully.",
           why: "Helps you plan hiring or identify skill gaps to address.",
         },
+        {
+          name: "Tool Recommendations",
+          description:
+            "Specific software tools and services recommended for implementation.",
+          why: "Saves research time and provides proven tool stack recommendations from experts.",
+        },
+        {
+          name: "AI Enhancement Opportunities",
+          description:
+            "Ways to leverage AI/ML to improve the product or create competitive advantages.",
+          why: "Identifies modern enhancement opportunities that can differentiate your solution.",
+        },
       ],
     },
     {
@@ -177,6 +201,12 @@ export default function BlueprintGuidePage() {
           name: "Onboarding Strategy",
           description: "How to get new customers up and running successfully.",
           why: "Critical for retention and reducing churn in early stages.",
+        },
+        {
+          name: "Maintenance and Scale",
+          description:
+            "Ongoing operational requirements and scaling considerations as you grow.",
+          why: "Helps you plan for long-term operational needs and avoid scaling surprises.",
         },
       ],
     },
@@ -209,6 +239,24 @@ export default function BlueprintGuidePage() {
             "Strategic advice on sales approach, contract terms, and growth tactics.",
           why: "Practical wisdom to accelerate your go-to-market success.",
         },
+        {
+          name: "Affiliate Partnerships",
+          description:
+            "Potential partnership opportunities to accelerate growth and distribution.",
+          why: "Identifies strategic alliances that can multiply your reach and credibility.",
+        },
+        {
+          name: "Digital Product Bundles",
+          description:
+            "Additional digital products or resources you can create and sell alongside your main offering.",
+          why: "Reveals opportunities to increase revenue per customer and provide more value.",
+        },
+        {
+          name: "Community Monetization Ideas",
+          description:
+            "Ways to build and monetize a community around your product or industry.",
+          why: "Shows how to create additional revenue streams and increase customer stickiness.",
+        },
       ],
     },
     {
@@ -232,6 +280,12 @@ export default function BlueprintGuidePage() {
           description:
             "Technical and business challenges you'll face as you grow.",
           why: "Helps you architect for scale and avoid expensive rewrites later.",
+        },
+        {
+          name: "Regulatory Compliance Considerations",
+          description:
+            "Legal, privacy, and industry-specific compliance requirements.",
+          why: "Prevents costly legal issues and ensures you build compliant solutions from day one.",
         },
       ],
     },
@@ -263,6 +317,18 @@ export default function BlueprintGuidePage() {
           description:
             "A realistic example of what success looks like for this blueprint.",
           why: "Provides a concrete vision of the outcome you're working toward.",
+        },
+        {
+          name: "Virality Potential",
+          description:
+            "Assessment of how likely the product is to spread organically through word-of-mouth.",
+          why: "Helps you understand and plan for organic growth opportunities.",
+        },
+        {
+          name: "Community Features",
+          description:
+            "Ways to build community engagement and user-generated content around your product.",
+          why: "Shows how to increase engagement, retention, and create network effects.",
         },
       ],
     },
@@ -312,7 +378,7 @@ export default function BlueprintGuidePage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-4 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">

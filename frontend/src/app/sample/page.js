@@ -89,7 +89,7 @@ export default function SampleBlueprintPage() {
               <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
                 <TrendingUp className="w-6 h-6 text-primary mx-auto mb-2" />
                 <div className="text-sm font-semibold text-gray-900">
-                  {sampleData.founder_fit_score}/5
+                  {sampleData.founder_fit_score}
                 </div>
                 <div className="text-xs text-gray-500">Founder Fit</div>
               </div>
@@ -172,8 +172,8 @@ export default function SampleBlueprintPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg font-medium text-primary mb-6">
-                        "{sampleData.uvp_statement}"
+                      <p className="text-lg bg-blue-50 p-4 font-bold text-primary mb-6">
+                        {sampleData.uvp_statement}
                       </p>
                       <div className="space-y-4">
                         <div className="p-4 bg-gray-50 rounded-lg">
@@ -184,7 +184,7 @@ export default function SampleBlueprintPage() {
                             {sampleData.target_users}
                           </p>
                         </div>
-                        <div className="p-4 bg-blue-50 rounded-lg">
+                        <div className="p-4 bg-gray-50 rounded-lg">
                           <h4 className="font-semibold mb-3 text-gray-900">
                             Platform & Scope
                           </h4>
