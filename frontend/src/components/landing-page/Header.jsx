@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import RetryTile from "@/components/landing-page/RetryTile";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -23,16 +24,18 @@ export default function Header() {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span>3 new blueprints today</span>
             </div>
+            <Link href="/sample">
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden sm:inline-flex border-gray-200 hover:border-primary/30 text-xs sm:text-sm"
+              >
+                Sample
+              </Button>
+            </Link>
             <Button
-              variant="outline"
               size="sm"
-              className="hidden sm:inline-flex border-gray-200 hover:border-primary/30"
-            >
-              Browse Free
-            </Button>
-            <Button
-              size="sm"
-              className="shadow-lg hover:shadow-xl transition-all duration-300"
+              className="shadow-lg hover:shadow-xl transition-all duration-300 text-xs sm:text-sm"
             >
               Unlock Pro
             </Button>
