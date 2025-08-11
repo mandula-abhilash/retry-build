@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: [
+          "var(--font-inter)",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+        body: ["var(--font-lato)", "system-ui", "-apple-system", "sans-serif"],
+        sans: ["var(--font-lato)", "system-ui", "-apple-system", "sans-serif"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
