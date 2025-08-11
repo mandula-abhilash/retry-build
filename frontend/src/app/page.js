@@ -114,7 +114,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ArrowRight className="h-8 w-8 text-secondary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Progress > vibes</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Progress &gt; vibes
+              </h3>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
