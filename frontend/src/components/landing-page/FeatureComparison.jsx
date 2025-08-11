@@ -64,7 +64,7 @@ export default function FeatureComparison() {
             <div className="text-center mb-8 flex-grow">
               <Badge
                 variant="outline"
-                className="mb-6 px-4 py-2 text-sm font-medium border-gray-300 text-gray-600 h-10 flex items-center justify-center"
+                className="mt-4 mb-6 px-4 py-2 text-sm font-medium border-gray-300 text-gray-600 h-10 flex items-center justify-center"
               >
                 <Eye className="w-4 h-4 mr-2" />
                 Exploration
@@ -73,11 +73,15 @@ export default function FeatureComparison() {
               <p className="text-gray-600">
                 Perfect for browsing and discovery
               </p>
+              <p className="text-gray-600">
+                Explore the vault, get inspired. Upgrade when you want the full
+                picture.{" "}
+              </p>
             </div>
             <Button
               variant="outline"
               size="lg"
-              className="w-full mb-6 py-4 text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 h-14"
+              className="w-full mb-16 py-4 text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 h-14"
             >
               Start Exploring
             </Button>
@@ -126,6 +130,11 @@ export default function FeatureComparison() {
                 <span className="text-xl opacity-80">/month</span>
               </div>
               <p className="text-white/90">Complete strategic intelligence</p>
+              <p className="text-white/90">
+                {" "}
+                Clarity for the next step. Full blueprint fields across every
+                idea.
+              </p>
             </div>
             <Button
               size="lg"
