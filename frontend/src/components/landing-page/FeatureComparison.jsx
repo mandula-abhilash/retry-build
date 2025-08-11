@@ -81,11 +81,11 @@ export default function FeatureComparison() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full mb-16 py-4 text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 h-14"
+              className="w-full mb-6 py-4 text-lg font-semibold border-2 border-gray-200 hover:border-gray-300 h-14"
             >
               Start Exploring
             </Button>
-            <div className="space-y-4">
+            <div className="space-y-4 pb-10">
               <div className="flex items-center space-x-3">
                 <Check className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-gray-700">
