@@ -1,11 +1,11 @@
 {
-  "TitleSimple": "Quieter Shifts for Nurses",
-  "Slug": "quieter-shifts-for-nurses",
-  "Description": "Software that reduces noise for nursing teams. Helps staff focus, lowers stress, and gives managers live noise insights.",
-  "ProblemStatement": "Hospital floors are loud: alarms, carts, conversations, and machines. Constant noise raises stress and error risk for nurses. It also hurts sleep and long-term health. Hospitals lack simple tools to measure, manage, and act on noise in real time. This gap lowers job satisfaction and can push staff to leave.",
-  "SolutionOverview": "Build a web and mobile app that filters non-critical sounds in headsets and flags excessive noise on the floor. The system monitors noise by zone, classifies sources, and sends alerts only when thresholds matter. Managers get dashboards, trends, and root-cause hints to fix noisy routines. The app syncs with existing comms so critical alarms always break through.",
-  "TargetUsers": "Primary buyers are hospital and clinic operations leaders who manage nursing units. Daily users are nurses on shift who need fewer distractions. Secondary users include charge nurses, facility managers, and patient experience teams.",
-  "Tags": [
+  "title_simple": "Quieter Shifts for Nurses",
+  "slug": "quieter-shifts-for-nurses",
+  "description": "Software that reduces noise for nursing teams. Helps staff focus, lowers stress, and gives managers live noise insights.",
+  "problem_statement": "Hospital floors are loud: alarms, carts, conversations, and machines. Constant noise raises stress and error risk for nurses. It also hurts sleep and long-term health. Hospitals lack simple tools to measure, manage, and act on noise in real time. This gap lowers job satisfaction and can push staff to leave.",
+  "solution_overview": "Build a web and mobile app that filters non-critical sounds in headsets and flags excessive noise on the floor. The system monitors noise by zone, classifies sources, and sends alerts only when thresholds matter. Managers get dashboards, trends, and root-cause hints to fix noisy routines. The app syncs with existing comms so critical alarms always break through.",
+  "target_users": "Primary buyers are hospital and clinic operations leaders who manage nursing units. Daily users are nurses on shift who need fewer distractions. Secondary users include charge nurses, facility managers, and patient experience teams.",
+  "tags": [
     "healthcare",
     "nursing",
     "noise-monitoring",
@@ -13,9 +13,9 @@
     "patient-safety",
     "analytics"
   ],
-  "EffortLevel": "16–20 weeks",
-  "TechnicalComplexity": "Medium",
-  "CoreTechnologyStack": [
+  "effort_level": "16-20 weeks",
+  "technical_complexity": "Medium",
+  "core_technology_stack": [
     "TypeScript",
     "React/Next.js",
     "Node.js (NestJS)",
@@ -25,18 +25,18 @@
     "Mobile (React Native)",
     "Cloud (AWS/GCP)"
   ],
-  "TargetAudienceType": "B2B, SMB, Enterprise, Healthcare",
-  "MarketScopeAndRegion": "Global hospitals and clinics; start US/EU",
-  "MaintenanceEffort": "Medium — model updates, device fleet, integrations",
-  "MonetizationModel": [
+  "target_audience_type": "B2B, SMB, Enterprise, Healthcare",
+  "market_scope_and_region": "Global hospitals and clinics; start US/EU",
+  "maintenance_effort": "Medium - model updates, device fleet, integrations",
+  "monetization_model": [
     "Subscription",
     "Tiered seats/locations",
     "Usage-based alerts",
     "Professional services"
   ],
-  "IdealPlatform": "Web + Mobile",
-  "NoCodeFeasibility": "Yes, with dev help — dashboards no-code; audio DSP needs code",
-  "RequiredSkillsOrTeam": [
+  "ideal_platform": "Web + Mobile",
+  "no_code_feasibility": "Yes, with dev help - dashboards no-code; audio DSP needs code",
+  "required_skills_or_team": [
     "Full-stack engineer",
     "Mobile engineer",
     "Audio/DSP engineer",
@@ -44,7 +44,7 @@
     "Healthcare integrations engineer",
     "Sales/BD with hospital experience"
   ],
-  "Timeline": [
+  "timeline": [
     {
       "phase": "Discovery & Compliance Plan",
       "duration": "2 weeks"
@@ -63,11 +63,11 @@
     },
     {
       "phase": "Hardening & Rollout Toolkit",
-      "duration": "3–5 weeks"
+      "duration": "3-5 weeks"
     }
   ],
-  "MaintenanceAndScale": "Monitor audio models and recalibrate per site layout. Manage mobile and edge device updates over-the-air. Keep integrations stable with versioned APIs and sandbox environments. Add multi-tenant controls and data retention policies for larger systems.",
-  "TechStackSuggestions": [
+  "maintenance_and_scale": "Monitor audio models and recalibrate per site layout. Manage mobile and edge device updates over-the-air. Keep integrations stable with versioned APIs and sandbox environments. Add multi-tenant controls and data retention policies for larger systems.",
+  "tech_stack_suggestions": [
     "Next.js + Vercel or AWS Amplify",
     "Node.js + NestJS on AWS ECS/Fargate",
     "PostgreSQL + TimescaleDB",
@@ -76,7 +76,7 @@
     "Auth0/Okta for SSO",
     "Terraform/IaC"
   ],
-  "MVPFeatureSet": [
+  "mvp_feature_set": [
     "Real-time zone noise meter (A-weighted dB)",
     "Smart thresholds with quiet-hours schedules",
     "Priority alert routing to mobile/desktop",
@@ -86,16 +86,16 @@
     "Simple reports (weekly, monthly)",
     "SSO and role-based access"
   ],
-  "MVP Scope Description": "Measure noise per zone, alert when limits break, and show simple trends. Integrate with one nurse-call system and mobile app for alerts. No automatic building controls or deep EMR links in MVP.",
-  "MVPType": "SaaS Web App",
-  "KeyDifferentiators": [
+  "mvp_scope_description": "Measure noise per zone, alert when limits break, and show simple trends. Integrate with one nurse-call system and mobile app for alerts. No automatic building controls or deep EMR links in MVP.",
+  "mvp_type": "SaaS Web App",
+  "key_differentiators": [
     "Nurse-first UI tuned for shift flow",
     "Alarm passthrough to avoid missed criticals",
     "Zone-level insights not just averages",
     "Fast rollout with off-the-shelf sensors/phones",
     "Actionable playbooks tied to patterns"
   ],
-  "CoreFeaturesPriority": [
+  "core_features_priority": [
     {
       "feature": "Zone noise monitoring",
       "priority": 1
@@ -125,14 +125,14 @@
       "priority": 2
     }
   ],
-  "ScalabilityConsiderations": [
+  "scalability_considerations": [
     "Edge processing to limit raw audio transfer",
     "Multi-tenant isolation by org/unit",
     "Configurable alert policies per site",
     "Device fleet management and health checks",
     "Regional data residency options"
   ],
-  "ExecutionPlan": [
+  "execution_plan": [
     {
       "phase": "User Research",
       "deliverables": "Workflows, thresholds, device plan"
@@ -154,15 +154,15 @@
       "deliverables": "Onsite tests, playbooks, ROI calc"
     }
   ],
-  "UVPStatement": "Cut floor noise without missing critical alarms, giving nurses calmer shifts and managers clear actions.",
-  "BusinessModelInsights": [
+  "uvp_statement": "Cut floor noise without missing critical alarms, giving nurses calmer shifts and managers clear actions.",
+  "business_model_insights": [
     "Sell by bed count and zones",
     "Land with one unit; expand by floor",
     "Bundle training and SOPs to show ROI",
     "Offer hardware-agnostic kits",
     "Annual contracts aligned to fiscal cycles"
   ],
-  "CompetitiveAnalysis": [
+  "competitive_analysis": [
     {
       "competitor": "Sound level monitors (hardware-only)",
       "notes": "Great measurement; weak workflows and alerts"
@@ -176,69 +176,69 @@
       "notes": "Cheap; not compliant or fleet-ready"
     }
   ],
-  "RisksAndChallenges": [
-    "Alarm fatigue concerns — prove passthrough safety with tests",
-    "Change management — provide quick wins and staff training",
-    "IT/security reviews — prepare SOC2-ready controls",
-    "Hardware variability — certify a short list of devices",
-    "Legal/privacy worries — avoid storing raw speech; hash/aggregate",
-    "Integration delays — sandbox and mock adapters to decouple"
+  "risks_and_challenges": [
+    "Alarm fatigue concerns - prove passthrough safety with tests",
+    "Change management - provide quick wins and staff training",
+    "IT/security reviews - prepare SOC2-ready controls",
+    "Hardware variability - certify a short list of devices",
+    "Legal/privacy worries - avoid storing raw speech; hash/aggregate",
+    "Integration delays - sandbox and mock adapters to decouple"
   ],
-  "PricingStrategy": [
+  "pricing_strategy": [
     {
       "tier": "Clinic",
-      "price": "$200–$400/month per site"
+      "price": "$200-$400/month per site"
     },
     {
       "tier": "Hospital Unit",
-      "price": "$1,000–$2,500/month per unit"
+      "price": "$1,000-$2,500/month per unit"
     },
     {
       "tier": "Enterprise",
-      "price": "$8,000–$20,000/month per hospital"
+      "price": "$8,000-$20,000/month per hospital"
     },
     {
       "tier": "Add-ons",
-      "price": "$500–$2,000/month (advanced analytics, custom reports)"
+      "price": "$500-$2,000/month (advanced analytics, custom reports)"
     }
   ],
-  "PotentialUpsells": [
+  "potential_upsells": [
     "Advanced source classification model",
     "Executive ROI dashboards",
     "Custom integrations and SLAs",
     "Onsite acoustic assessment",
     "Staff training and playbooks"
   ],
-  "AffiliatePartnerships": [
+  "affiliate_partnerships": [
     "Nurse-call vendors",
     "Hospital IT resellers",
     "Healthcare staffing firms",
     "MDM/device providers",
     "Facilities consulting groups"
   ],
-  "DigitalProductBundles": [
+  "digital_product_bundles": [
     "Noise reduction SOPs",
     "Shift checklist templates",
     "Onboarding slides for staff",
     "Manager coaching videos",
     "ROI calculator sheet"
   ],
-  "CommunityMonetizationIdeas": [
+  "community_monetization_ideas": [
     "Private forum for best practices",
     "Quarterly benchmark reports",
     "Certification for quiet units",
     "Office hours with experts",
     "Template marketplace"
   ],
-  "MarketSize": "Estimated: 150k+ global hospitals and large clinics; reachable software spend $0.5–1.5B/year",
-  "MonetizationDifficulty": "Medium — B2B sales cycles but clear ROI and retention goals",
-  "EarlyTractionAndValidation": [
-    "Run 2–3 ward pilots with pre/post noise and incident metrics",
+  "market_size": "Estimated: 150k+ global hospitals and large clinics; reachable software spend $0.5-1.5B/year",
+  "monetization_difficulty": "Medium - B2B sales cycles but clear ROI and retention goals",
+  "early_traction_and_validation": [
+    "Run 2-3 ward pilots with pre/post noise and incident metrics",
     "Collect NPS from nurses after 30 days",
     "Publish a short case study with dB reduction and alarm stats",
     "Secure letters of intent tied to pilot success"
   ],
-  "MarketingChannels": [
+  "marketing_channels": [
     "Direct outreach to nurse leaders",
     "Healthcare IT conferences",
     "Partnerships with nurse-call vendors",
@@ -246,7 +246,7 @@
     "LinkedIn ads to hospital ops",
     "Thought leadership case studies"
   ],
-  "ValidationSteps": [
+  "validation_steps": [
     "Interview 20+ nurses and 5 managers; confirm top 3 noise sources",
     "Wizard-of-Oz shift: manual alerts to test value; target ≥70% helpful",
     "Pilot in one unit for 4 weeks; aim ≥5 dB average reduction",
@@ -254,7 +254,7 @@
     "Procurement dry run with IT/security; pass checklist first try",
     "Willingness-to-pay survey; target ≥$1k/unit/month median"
   ],
-  "KPIs": [
+  "kpis": [
     "Average dB by zone",
     "Quiet time minutes per shift",
     "Alarm acknowledgements within SLA",
@@ -264,8 +264,8 @@
     "Time to first alert",
     "Pilot-to-contract conversion"
   ],
-  "EarlyAdopterProfile": "Progressive hospital units with high alarm fatigue and turnover. Leaders open to pilots and data-driven changes. Sites with modern nurse-call systems are ideal.",
-  "GrowthHacks": [
+  "early_adopter_profile": "Progressive hospital units with high alarm fatigue and turnover. Leaders open to pilots and data-driven changes. Sites with modern nurse-call systems are ideal.",
+  "growth_hacks": [
     "Offer free Quiet Shift assessment",
     "Leaderboard for quietest units",
     "COI-backed case studies for admin",
@@ -273,7 +273,7 @@
     "Referral rewards for nurse champions",
     "Publish open noise benchmark by specialty"
   ],
-  "OnboardingStrategy": [
+  "onboarding_strategy": [
     "Site survey to map zones",
     "Install or assign devices",
     "Set thresholds and quiet hours",
@@ -282,42 +282,42 @@
     "Weekly review and tweak settings",
     "Share quick-win playbooks"
   ],
-  "SuccessStory": "A 32-bed cardiac unit ran a 6-week pilot. Average noise fell by 6 dB during nights. Nurses reported fewer interruptions and faster charting. The manager used the data to adjust cleaning schedules and silence non-urgent alerts. The hospital expanded to three more units.",
-  "ViralityPotential": "Medium — unit-to-unit expansion inside hospitals and peer referrals among nurse leaders",
-  "CommunityFeatures": [
+  "success_story": "A 32-bed cardiac unit ran a 6-week pilot. Average noise fell by 6 dB during nights. Nurses reported fewer interruptions and faster charting. The manager used the data to adjust cleaning schedules and silence non-urgent alerts. The hospital expanded to three more units.",
+  "virality_potential": "Medium - unit-to-unit expansion inside hospitals and peer referrals among nurse leaders",
+  "community_features": [
     "Playbook library by unit type",
     "Peer Q&A and tips",
     "Template sharing for thresholds",
     "Monthly best-practice webinars",
     "Anonymous benchmark comparisons"
   ],
-  "FounderFitScore": 4,
-  "WhyNow": "Burnout and staffing shortages push hospitals to improve working conditions. Better mobile devices and edge audio make safe, real-time filtering practical.",
-  "ToolRecommendations": [
-    "Stripe — subscriptions and invoicing",
-    "Mixpanel — product analytics",
-    "Sentry — error monitoring",
-    "PostHog — feature flags",
-    "Twilio — notifications",
-    "Auth0 — enterprise SSO",
-    "Mirth Connect — healthcare interfaces",
-    "MDM (Intune) — device control",
-    "Grafana — ops dashboards",
-    "Terraform — reproducible infra"
+  "founder_fit_score": 4,
+  "why_now": "Burnout and staffing shortages push hospitals to improve working conditions. Better mobile devices and edge audio make safe, real-time filtering practical.",
+  "tool_recommendations": [
+    "Stripe - subscriptions and invoicing",
+    "Mixpanel - product analytics",
+    "Sentry - error monitoring",
+    "PostHog - feature flags",
+    "Twilio - notifications",
+    "Auth0 - enterprise SSO",
+    "Mirth Connect - healthcare interfaces",
+    "MDM (Intune) - device control",
+    "Grafana - ops dashboards",
+    "Terraform - reproducible infra"
   ],
-  "AIEnhancementOpportunities": [
+  "ai_enhancement_opportunities": [
     "Classify noise sources with on-device models",
     "Predict noisy periods by schedule and census",
     "Suggest threshold tweaks per unit",
     "Summarize weekly insights for managers",
     "Auto-generate playbooks from recurring patterns"
   ],
-  "RegulatoryComplianceConsiderations": [
+  "regulatory_compliance_considerations": [
     "SOC 2 Type II controls",
     "HIPAA boundary review (avoid PHI in audio)",
     "GDPR data minimization and DPA",
     "IEC/ISO alarm management guidance alignment",
     "Mobile device management and encryption at rest/in transit"
   ],
-  "InternalMonetizationTag": "healthcare-b2b-noise-mvp"
+  "internal_monetization_tag": "healthcare-b2b-noise-mvp"
 }

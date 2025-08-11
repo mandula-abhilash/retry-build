@@ -56,7 +56,7 @@ export default function SampleBlueprintPage() {
             </Link>
 
             <div className="flex flex-wrap gap-2 mb-6">
-              {sampleData.Tags.map((tag, index) => (
+              {sampleData.tags.map((tag, index) => (
                 <Badge key={index} variant="outline" className="capitalize">
                   {tag.replace("-", " ")}
                 </Badge>
@@ -64,39 +64,39 @@ export default function SampleBlueprintPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              {sampleData.TitleSimple}
+              {sampleData.title_simple}
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-4xl">
-              {sampleData.Description}
+              {sampleData.description}
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
                 <Clock className="w-6 h-6 text-primary mx-auto mb-2" />
                 <div className="text-sm font-semibold text-gray-900">
-                  {sampleData.EffortLevel}
+                  {sampleData.effort_level}
                 </div>
                 <div className="text-xs text-gray-500">Timeline</div>
               </div>
               <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
                 <Target className="w-6 h-6 text-secondary mx-auto mb-2" />
                 <div className="text-sm font-semibold text-gray-900">
-                  {sampleData.TechnicalComplexity}
+                  {sampleData.technical_complexity}
                 </div>
                 <div className="text-xs text-gray-500">Complexity</div>
               </div>
               <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
                 <Users className="w-6 h-6 text-accent mx-auto mb-2" />
                 <div className="text-sm font-semibold text-gray-900">
-                  B2B Healthcare
+                  {sampleData.target_audience_type}
                 </div>
                 <div className="text-xs text-gray-500">Market</div>
               </div>
               <div className="text-center p-4 bg-white rounded-lg shadow-sm border">
                 <TrendingUp className="w-6 h-6 text-primary mx-auto mb-2" />
                 <div className="text-sm font-semibold text-gray-900">
-                  $0.5-1.5B
+                  {sampleData.market_size.split(":")[1]?.trim() || "$0.5-1.5B"}
                 </div>
                 <div className="text-xs text-gray-500">Market Size</div>
               </div>
@@ -192,21 +192,40 @@ export default function SampleBlueprintPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg font-medium text-primary mb-4">
-                        "{sampleData.UVPStatement}"
+                      <p className="bg-blue-50 p-4 rounded-md text-lg font-semibold text-primary mb-6">
+                        {sampleData.uvp_statement}
                       </p>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <div>
-                          <h4 className="font-semibold mb-2">Target Users</h4>
-                          <p className="text-gray-600 text-sm">
-                            {sampleData.TargetUsers}
+                      <div className="space-y-4">
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-gray-900">
+                            Target Users
+                          </h4>
+                          <p className="text-gray-600 text-sm leading-relaxed">
+                            {sampleData.target_users}
                           </p>
                         </div>
-                        <div>
-                          <h4 className="font-semibold mb-2">Platform</h4>
-                          <p className="text-gray-600 text-sm">
-                            {sampleData.IdealPlatform}
-                          </p>
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-gray-900">
+                            Platform & Scope
+                          </h4>
+                          <div className="grid sm:grid-cols-2 gap-3 text-sm">
+                            <div>
+                              <span className="font-medium text-gray-700">
+                                Platform:
+                              </span>
+                              <span className="text-gray-600 ml-2">
+                                {sampleData.ideal_platform}
+                              </span>
+                            </div>
+                            <div>
+                              <span className="font-medium text-gray-700">
+                                Market:
+                              </span>
+                              <span className="text-gray-600 ml-2">
+                                {sampleData.target_audience_type}
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </CardContent>
@@ -218,7 +237,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="grid gap-3">
-                        {sampleData.KeyDifferentiators.map((diff, index) => (
+                        {sampleData.key_differentiators.map((diff, index) => (
                           <div
                             key={index}
                             className="flex items-start space-x-3"
@@ -245,7 +264,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-700 leading-relaxed">
-                        {sampleData.ProblemStatement}
+                        {sampleData.problem_statement}
                       </p>
                     </CardContent>
                   </Card>
@@ -259,12 +278,12 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-700 leading-relaxed mb-4">
-                        {sampleData.SolutionOverview}
+                        {sampleData.solution_overview}
                       </p>
                       <div className="bg-gray-50 p-4 rounded-lg">
                         <h4 className="font-semibold mb-2">Why Now?</h4>
                         <p className="text-gray-600 text-sm">
-                          {sampleData.WhyNow}
+                          {sampleData.why_now}
                         </p>
                       </div>
                     </CardContent>
@@ -287,7 +306,7 @@ export default function SampleBlueprintPage() {
                         <div>
                           <h4 className="font-semibold mb-2">Market Size</h4>
                           <p className="text-gray-700">
-                            {sampleData.MarketSize}
+                            {sampleData.market_size}
                           </p>
                         </div>
                         <div>
@@ -295,7 +314,7 @@ export default function SampleBlueprintPage() {
                             Target Audience
                           </h4>
                           <p className="text-gray-700">
-                            {sampleData.TargetAudienceType}
+                            {sampleData.target_audience_type}
                           </p>
                         </div>
                         <div>
@@ -303,7 +322,7 @@ export default function SampleBlueprintPage() {
                             Geographic Scope
                           </h4>
                           <p className="text-gray-700">
-                            {sampleData.MarketScopeAndRegion}
+                            {sampleData.market_scope_and_region}
                           </p>
                         </div>
                       </div>
@@ -316,7 +335,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {sampleData.CompetitiveAnalysis.map((comp, index) => (
+                        {sampleData.competitive_analysis.map((comp, index) => (
                           <div
                             key={index}
                             className="border-l-4 border-primary/20 pl-4"
@@ -340,7 +359,7 @@ export default function SampleBlueprintPage() {
                     <CardContent>
                       <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                         <p className="text-gray-700 italic">
-                          "{sampleData.SuccessStory}"
+                          "{sampleData.success_story}"
                         </p>
                       </div>
                     </CardContent>
@@ -365,7 +384,7 @@ export default function SampleBlueprintPage() {
                             Core Technologies
                           </h4>
                           <div className="flex flex-wrap gap-2">
-                            {sampleData.CoreTechnologyStack.map(
+                            {sampleData.core_technology_stack.map(
                               (tech, index) => (
                                 <Badge
                                   key={index}
@@ -381,7 +400,7 @@ export default function SampleBlueprintPage() {
                         <div>
                           <h4 className="font-semibold mb-3">Required Team</h4>
                           <div className="space-y-2">
-                            {sampleData.RequiredSkillsOrTeam.map(
+                            {sampleData.required_skills_or_team.map(
                               (skill, index) => (
                                 <div
                                   key={index}
@@ -406,10 +425,10 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-4">
-                        {sampleData["MVP Scope Description"]}
+                        {sampleData.mvp_scope_description}
                       </p>
                       <div className="space-y-3">
-                        {sampleData.MVPFeatureSet.map((feature, index) => (
+                        {sampleData.mvp_feature_set.map((feature, index) => (
                           <div
                             key={index}
                             className="flex items-start space-x-3"
@@ -430,19 +449,21 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {sampleData.CoreFeaturesPriority.map((item, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
-                          >
-                            <span className="text-gray-700">
-                              {item.feature}
-                            </span>
-                            <Badge className={priorityColors[item.priority]}>
-                              Priority {item.priority}
-                            </Badge>
-                          </div>
-                        ))}
+                        {sampleData.core_features_priority.map(
+                          (item, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                            >
+                              <span className="text-gray-700">
+                                {item.feature}
+                              </span>
+                              <Badge className={priorityColors[item.priority]}>
+                                Priority {item.priority}
+                              </Badge>
+                            </div>
+                          )
+                        )}
                       </div>
                     </CardContent>
                   </Card>
@@ -461,7 +482,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {sampleData.Timeline.map((phase, index) => (
+                        {sampleData.timeline.map((phase, index) => (
                           <div
                             key={index}
                             className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg"
@@ -489,7 +510,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {sampleData.ExecutionPlan.map((phase, index) => (
+                        {sampleData.execution_plan.map((phase, index) => (
                           <div
                             key={index}
                             className="border-l-4 border-secondary/30 pl-4"
@@ -512,7 +533,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {sampleData.OnboardingStrategy.map((step, index) => (
+                        {sampleData.onboarding_strategy.map((step, index) => (
                           <div
                             key={index}
                             className="flex items-start space-x-3"
@@ -543,7 +564,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="grid gap-4">
-                        {sampleData.PricingStrategy.map((tier, index) => (
+                        {sampleData.pricing_strategy.map((tier, index) => (
                           <div
                             key={index}
                             className="p-4 border rounded-lg hover:shadow-md transition-shadow"
@@ -570,7 +591,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="grid sm:grid-cols-2 gap-4">
-                        {sampleData.MonetizationModel.map((model, index) => (
+                        {sampleData.monetization_model.map((model, index) => (
                           <div
                             key={index}
                             className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg"
@@ -589,7 +610,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {sampleData.PotentialUpsells.map((upsell, index) => (
+                        {sampleData.potential_upsells.map((upsell, index) => (
                           <div
                             key={index}
                             className="flex items-start space-x-3"
@@ -610,7 +631,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {sampleData.BusinessModelInsights.map(
+                        {sampleData.business_model_insights.map(
                           (insight, index) => (
                             <div
                               key={index}
@@ -641,7 +662,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {sampleData.RisksAndChallenges.map((risk, index) => (
+                        {sampleData.risks_and_challenges.map((risk, index) => (
                           <div
                             key={index}
                             className="p-4 bg-red-50 border border-red-200 rounded-lg"
@@ -659,7 +680,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {sampleData.ValidationSteps.map((step, index) => (
+                        {sampleData.validation_steps.map((step, index) => (
                           <div
                             key={index}
                             className="flex items-start space-x-3"
@@ -680,7 +701,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="grid sm:grid-cols-2 gap-3">
-                        {sampleData.KPIs.map((kpi, index) => (
+                        {sampleData.kpis.map((kpi, index) => (
                           <div
                             key={index}
                             className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg"
@@ -699,7 +720,7 @@ export default function SampleBlueprintPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3">
-                        {sampleData.EarlyTractionAndValidation.map(
+                        {sampleData.early_traction_and_validation.map(
                           (strategy, index) => (
                             <div
                               key={index}
